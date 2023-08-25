@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "+4I0hmfjw+M5qWCQWpTgopFdkHeqzmV3C72EdHzvhts=",
+  "Source": "OcelotApiGW",
+  "BasePath": "_content/OcelotApiGW",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
