@@ -8,8 +8,11 @@
     ".NETCoreApp,Version=v6.0": {
       "Product.API/1.0.0": {
         "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Common.Logging": "1.0.0",
           "Contracts": "1.0.0",
+          "Infrastructure": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.0",
@@ -17,10 +20,34 @@
           "MySql.EntityFrameworkCore": "6.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "6.0.0",
           "Serilog.AspNetCore": "6.0.0",
+          "Shared": "1.0.0",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
           "Product.API.dll": {}
+        }
+      },
+      "AutoMapper/12.0.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.1.0"
+          }
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.1.0"
+          }
         }
       },
       "Google.Protobuf/3.21.9": {
@@ -68,6 +95,7 @@
           }
         }
       },
+      "Microsoft.CSharp/4.7.0": {},
       "Microsoft.EntityFrameworkCore/6.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Abstractions": "6.0.0",
@@ -750,8 +778,28 @@
         }
       },
       "Contracts/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.0"
+        },
         "runtime": {
           "Contracts.dll": {}
+        }
+      },
+      "Infrastructure/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "Contracts": "1.0.0"
+        },
+        "runtime": {
+          "Infrastructure.dll": {}
+        }
+      },
+      "Shared/1.0.0": {
+        "dependencies": {
+          "Serilog": "2.10.0"
+        },
+        "runtime": {
+          "Shared.dll": {}
         }
       }
     }
@@ -761,6 +809,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AutoMapper/12.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hvV62vl6Hp/WfQ24yzo3Co9+OPl8wH8hApwVtgWpiAynVJkUcs7xvehnSftawL8Pe8FrPffBRM3hwzLQqWDNjA==",
+      "path": "automapper/12.0.1",
+      "hashPath": "automapper.12.0.1.nupkg.sha512"
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+g/K+Vpe3gGMKGzjslMOdqNlkikScDjWfVvmWTayrDHaG/n2pPmFBMa+jKX1r/h6BDGFdkyRjAuhFE3ykW+r1g==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/12.0.1",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512"
     },
     "Google.Protobuf/3.21.9": {
       "type": "package",
@@ -796,6 +858,13 @@
       "sha512": "sha512-Wp2F7BamQ2Q/7Hk834nV9vRQapgcr8kgv9Jvfm8J3D0IhDqZMMl+a2yxUq5ltJitvXvQfB8W6K4F4fCbw/P6YQ==",
       "path": "k4os.hash.xxhash/1.0.8",
       "hashPath": "k4os.hash.xxhash.1.0.8.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/6.0.0": {
       "type": "package",
@@ -1286,6 +1355,16 @@
       "sha512": ""
     },
     "Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

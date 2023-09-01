@@ -9,3 +9,7 @@ C:\Users\ASUS\Documents\MicroservicesLearning\Infrastructure\obj\Debug\net6.0\In
 C:\Users\ASUS\Documents\MicroservicesLearning\Infrastructure\obj\Debug\net6.0\refint\Infrastructure.dll
 C:\Users\ASUS\Documents\MicroservicesLearning\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
 C:\Users\ASUS\Documents\MicroservicesLearning\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
+C:\Users\ASUS\Documents\MicroservicesLearning\Infrastructure\bin\Debug\net6.0\Contracts.dll
+C:\Users\ASUS\Documents\MicroservicesLearning\Infrastructure\bin\Debug\net6.0\Contracts.pdb
+C:\Users\ASUS\Documents\MicroservicesLearning\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\ASUS\Documents\MicroservicesLearning\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CopyComplete

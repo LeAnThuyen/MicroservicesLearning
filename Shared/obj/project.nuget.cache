@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rhk8n6wdXbp+8gPq2cBfL9eeKc0vfxnvSAG2lAQvCd7u/RP2Z8/fIHgWtzye8LV2DD44Dclar4suAKQ5vNlmdQ==",
+  "dgSpecHash": "FMcPnfaDXEbduyAxe1Xm2jXlYT9wPWeUEgbxZkvn/KIwAj2UN30Y34fviv6Rs0ac2MXuQ76mekiAAj+PrKnGKQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS\\Documents\\MicroservicesLearning\\Shared\\Shared.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\serilog\\2.10.0\\serilog.2.10.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "s8256bEIK0sFT8kxQ0MGkOsV1LkV32zSFlaeqFz9GMDc11gdx9CPOtZWe0yoFyoB1ZFsWmA41r32Uc99DFmrqA==",
+  "dgSpecHash": "i1eu1wzEtxl1aNgPCTxs6IUnwvg3hQnwb4Ei5nSDDUpz5V1TbcrUYTJiUKGXhuPko9nQdN/Ss6g5xiGgj9/fug==",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS\\Documents\\MicroservicesLearning\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.0\\microsoft.entityframeworkcore.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.0\\microsoft.entityframeworkcore.analyzers.6.0.0.nupkg.sha512",

@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\BuildingBlock"
   ],
+  "SelectedNode": "\\TanaMicroservices.sln",
   "PreviewInSolutionExplorer": false
 }

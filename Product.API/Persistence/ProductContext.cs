@@ -14,11 +14,12 @@ namespace Product.API.Persistence
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-
+            builder.Entity<CatalogProduct>().HasIndex(c => c.No).IsUnique();
             builder.Entity<CatalogProduct>(b =>
             {
 
                 b.Property(x => x.Name).IsRequired().HasMaxLength(500);
+
                 b.Property(x => x.Description).HasMaxLength(2000);
             });
         }

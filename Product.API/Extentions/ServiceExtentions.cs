@@ -1,6 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Contracts.Common.Interfaces;
+using Infrastructure.Common;
+using Microsoft.EntityFrameworkCore;
 using MySql.Data.MySqlClient;
 using Product.API.Persistence;
+using Product.API.Repositories;
+using Product.API.Repositories.Interfaces;
 
 namespace Product.API.Extentions
 {
@@ -12,7 +16,21 @@ namespace Product.API.Extentions
             services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
+            services.AddInfrastrucureServices();
             services.ConfigureProductDbContext(configuration);
+            services.AddAuthorization();
+            services.AddAutoMapper(cfg => cfg.AddProfile(new MappingProfile()));
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder
+                        .SetIsOriginAllowed((host) =>
+                        true)
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials()
+                        );
+            });
             return services;
         }
 
@@ -26,6 +44,13 @@ namespace Product.API.Extentions
                 e.SchemaBehavior(Pomelo.EntityFrameworkCore.MySql.Infrastructure.MySqlSchemaBehavior.Ignore);
             }));
             return services;
+        }
+
+        public static IServiceCollection AddInfrastrucureServices(this IServiceCollection services)
+        {
+            return services.AddScoped(typeof(IRepositoryBaseAsync<,,>), typeof(RepositoryBaseAsync<,,>))
+                .AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>))
+                .AddScoped<IProductRepository, ProductRepository>();
         }
     }
 }
