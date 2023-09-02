@@ -1,12 +1,13 @@
 using Common.Logging;
+using Customer.API.Persistence;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
-Log.Logger = new LoggerConfiguration().WriteTo.Console().CreateBootstrapLogger();
-Log.Information("Starting Customer API By Tana Command Pro !");
+var builder = WebApplication.CreateBuilder(args);
 try
 {
-    var builder = WebApplication.CreateBuilder(args);
 
+    Log.Information($"Start {builder.Environment.ApplicationName} up");
     // DI Serilog
     builder.Host.UseSerilog(Serilogger.Configure);
 
@@ -15,7 +16,8 @@ try
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
-
+    var connectionString = builder.Configuration.GetConnectionString("DefaultConnectionString");
+    builder.Services.AddDbContext<CustomerContext>(options => options.UseNpgsql(connectionString));
     var app = builder.Build();
 
     // Configure the HTTP request pipeline.
@@ -28,7 +30,7 @@ try
     app.UseHttpsRedirection();
 
     app.UseAuthorization();
-
+    app.SeedCustomerData();
     app.MapControllers();
 
     app.Run();
@@ -36,11 +38,15 @@ try
 }
 catch (Exception ex)
 {
-    Log.Fatal(ex, "Unhandled Exception ");
+
+    string type = ex.GetType().Name;
+    if (type.Equals("StopTheHostException", StringComparison.Ordinal)) throw;
+
+    Log.Fatal(ex, $"Unhandled exception: {ex.Message}");
 }
 finally
 {
-    Log.Information("Shut down Customer API complate");
+    Log.Information($"Shutdown {builder.Environment.ApplicationName} complete");
     Log.CloseAndFlush();
 }
 

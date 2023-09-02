@@ -1,132 +1,124 @@
 version: '3.8'
 
 services:
- 
-  sqlserverdb:
-    container_name: sqlserverdb
-    environment:
-      SA_PASSWORD: "PassW0rd!"
-      ACCEPT_EULA: "Y"
-    restart: always
-    volumes:
-      - sqlserver_data:/var/lib/sqlserver/data
-    ports:
-       - "1435:1433"
-  mysqldb:
-    container_name: mysql_data
-    environment:
-      MYSQL_ROOT_PASSWORD: "PassW0rd!"
-    restart: always
-    volumes:
-      - mysql_data:/var/lib/mysqlserver
-    ports:
-       - "3306:3306"
+  #database section
+  
+  #orderdb: sql server
   orderdb:
     container_name: orderdb
     environment:
-      SA_PASSWORD: "PassW0rd!"
+      SA_PASSWORD: "Passw0rd!"
       ACCEPT_EULA: "Y"
     restart: always
     volumes:
       - sqlserver_data:/var/lib/sqlserver/data
-
-
+    ports:
+      - "1435:1433"
+        
+  #productdb: mysql
   productdb:
     container_name: productdb
+    command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: "PassW0rd!"
+      MYSQL_TCP_PORT: 3306
+      MYSQL_DATABASE: productdb
     restart: always
     volumes:
       - mysql_data:/var/lib/mysql
-
+    ports:
+      - "3306:3306"
+  
+  #customerdb: postgres
   customerdb:
     container_name: customerdb
     environment:
-     - POSTGRES_USER=admin
-     - POSTGRES_PASSWORD=admin1234
-     - POSTGRES_DB=DiscountDb
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin1234
+      - POSTGRES_DB=customerdb
     restart: always
-    volumes:
-      - postgres_data:/var/lib/postgressql/data
     ports:
-       - "5432:5432"
-
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    
+  #basketdb: redis
   basketdb:
     container_name: basketdb
     restart: always
     ports:
-       - "5433:5432"
-
+      - "6379:6379"
+  
+  #inventorydb: mongo
   inventorydb:
     container_name: inventorydb
     restart: always
+    ports:
+      - "27017:27017"
     volumes:
       - mongo_data:/data/db
-    ports:
-       - "27017:27017"
-
+  
+  #infrastructure section
+  
   rabbitmq:
     container_name: rabbitmq
     restart: always
     ports:
-       - "5672:5672"
-       - "15672:15672"
-
+      - "5672:5672"
+      - "15672:15672"
+    
   pgadmin:
     container_name: pgadmin
     environment:
-     - PGADMIN_DEFAULT_EMAIL=admin@tedu_microservice.com
-     - PGADMIN_DEFAULT_PASSWORD=admin1234
+      - PGADMIN_DEFAULT_EMAIL=leanthuyen@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=admin1234
     restart: always
+    ports:
+      - "5050:80"
     volumes:
       - pgadmin_data:/root/.pgadmin
-    ports:
-       - "5050:80"
-
+    
   portainer:
     container_name: portainer
     restart: always
+    ports:
+      - "8080:8000"
+      - "9000:9000"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
-    ports:
-       - "8080:8080"
-       - "9000:9000"
-
+  
   elasticsearch:
     container_name: elasticsearch
     environment:
-     - xpack.mornitoring.enable=true
-     - xpack.watcher.enable=false
-     - discovery.type=single-node
-    restart: always
-    volumes:
-      - elasticsearch_data:/usr/share/elasticsearch_data/data
+      - xpack.monitoring.enabled=true
+      - xpack.watcher.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - discovery.type=single-node
     ports:
-       - "9200:9200"
-   
+      - "9200:9200"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+  
   kibana:
     container_name: kibana
     environment:
-     - ELASTICSEARCH_URL=http://elasticsearch:9200
-    depends_on: 
-    - elasticsearch
-    restart: always
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
     ports:
-       - "5601:5601"
-
-  
- # Microservice sections
+      - "5601:5601"
+      
+      
+  #microservices api sections
   product.api:
     container_name: product.api
     environment:
-        - ASPNETCORE_ENVIROMENT=Development
-        - ASPNETCORE_URLS=http://+:80
-        - "ConnectionStrings:DefaultConnectionString=Server=productdb;Port=3306;Database=productdb;Uid=root;Pwd=PassW0rd!;"
-    depends_on:
-        - productdb
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - "ConnectionStrings:DefaultConnectionString=Server=productdb;Port=3306;Database=productdb;Uid=root;Pwd=PassW0rd!;"
+    depends_on: 
+      - productdb
     ports:
-         - "6002:80"
+      - "6002:80"
     restart: always
-
-   
