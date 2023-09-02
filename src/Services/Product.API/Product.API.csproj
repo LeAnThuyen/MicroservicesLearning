@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerfileContext>..\..\..</DockerfileContext>
+		<UserSecretsId>7074ecd3-034f-4c2d-b40c-119805ffe6d7</UserSecretsId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="12.0.1" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.4" />
+		<PackageReference Include="MySql.Data" Version="8.1.0" />
+		<PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.0" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.0" />
+		<PackageReference Include="Serilog.AspNetCore" Version="6.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Migrations\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\BuildingBlocks\Common.Logging\Common.Logging.csproj" />
+	  <ProjectReference Include="..\..\BuildingBlocks\Contracts\Contracts.csproj" />
+	  <ProjectReference Include="..\..\BuildingBlocks\Infrastructure\Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\BuildingBlocks\Shared\Shared.csproj" />
+	</ItemGroup>
+
+</Project>
