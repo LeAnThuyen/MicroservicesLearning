@@ -9,6 +9,9 @@ namespace Customer.API.Persistence
 
         }
 
+
+
+        // An Thuyen Le Fuckin Deptrai
         public DbSet<Entities.Customer> Customers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
