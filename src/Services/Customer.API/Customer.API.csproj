@@ -28,8 +28,4 @@
 		<ProjectReference Include="..\..\BuildingBlocks\Infrastructure\Infrastructure.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="NewFolder\" />
-	</ItemGroup>
-
 </Project>
