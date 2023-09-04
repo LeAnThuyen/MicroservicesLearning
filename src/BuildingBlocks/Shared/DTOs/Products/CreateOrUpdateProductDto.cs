@@ -1,4 +1,4 @@
-﻿namespace Shared.DTOs
+﻿namespace Shared.DTOs.Products
 {
     public abstract class CreateOrUpdateProductDto
     {

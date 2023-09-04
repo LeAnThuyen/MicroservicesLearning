@@ -1,5 +1,6 @@
 using Common.Logging;
 using Contracts.Common.Interfaces;
+using Customer.API.Controllers;
 using Customer.API.Persistence;
 using Customer.API.Repositories;
 using Customer.API.Repositories.Interfaces;
@@ -13,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 try
 {
 
-    Log.Information($"Start {builder.Environment.ApplicationName} up");
+    Log.Information($"Start {builder.Environment.ApplicationName} Minimal up");
     // DI Serilog
     builder.Host.UseSerilog(Serilogger.Configure);
 
@@ -24,27 +25,25 @@ try
     builder.Services.AddSwaggerGen();
 
     builder.Services.AddScoped<ICustomerRepository, CustomerRepository>()
-         .AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>))
-                .AddScoped(typeof(IRepositoryBaseAsync<,,>), typeof(RepositoryBaseAsync<,,>))
+                .AddScoped(typeof(IRepositoryQueryBaseAsync<,,>), typeof(RepositoryQueryBase<,,>))
                 .AddScoped<ICustomerService, CustomerService>();
 
     var connectionString = builder.Configuration.GetConnectionString("DefaultConnectionString");
     builder.Services.AddDbContext<CustomerContext>(options => options.UseNpgsql(connectionString));
     var app = builder.Build();
-    app.Map("/", () => "Welcome to Customer API !");
-    app.MapGet("/api/customers", async (ICustomerService customerService) => await customerService.GetCustomersAsync());
-    app.MapGet("/api/customers/{username}", async (string username, ICustomerService customerService) => await customerService.GetCustomerByUserNameAsync(username));
-    app.MapPost("/", () => "Welcome to Customer API !");
-    app.MapPut("/", () => "Welcome to Customer API !");
-    app.MapDelete("/", () => "Welcome to Customer API !");
+    app.MapCustomersAPI();
     // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
     {
         app.UseSwagger();
-        app.UseSwaggerUI();
+        app.UseSwaggerUI(c =>
+        {
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json",
+             $"{builder.Environment.ApplicationName} Minimal v1"));
+        });
     }
 
-    app.UseHttpsRedirection();
+    //app.UseHttpsRedirection(); Production Only
 
     app.UseAuthorization();
     app.SeedCustomerData();
@@ -63,7 +62,7 @@ catch (Exception ex)
 }
 finally
 {
-    Log.Information($"Shutdown {builder.Environment.ApplicationName} complete");
+    Log.Information($"Shutdown {builder.Environment.ApplicationName} Minimal complete");
     Log.CloseAndFlush();
 }
 

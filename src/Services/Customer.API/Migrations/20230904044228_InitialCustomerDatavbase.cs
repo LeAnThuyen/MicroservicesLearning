@@ -5,7 +5,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Customer.API.Migrations
 {
-    public partial class InitCustomerDb : Migration
+    public partial class InitialCustomerDatavbase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
