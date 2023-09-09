@@ -26,12 +26,12 @@
 docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d --remove-orphans --build
 
 # Install Redis for window
-step 1: go to https://github.com/microsoftarchive/redis/releases to download redis and install
-step 2: turn on terminal and see first location (Example below is my terminal)
+1: go to https://github.com/microsoftarchive/redis/releases to download redis and install
+2: turn on terminal and see first location (Example below is my terminal)
 C:\Users\ASUS>
 and after download redis successfully and it will be located in Program Files
-step 3: Copy all and paste it in your first location that found on in step 2
-step 4: turn on your terminal and type
+3: Copy all and paste it in your first location that found on in step 2
+4: turn on your terminal and type
 + redis-server : start redis
 + redis-cli : onpen redis cli
 + ping : check redis if it respone PONG that is Oke
