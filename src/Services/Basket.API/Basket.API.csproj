@@ -1,20 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <DockerfileContext>..\..\TanaMicroservice</DockerfileContext>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerfileContext>..\..\TanaMicroservice</DockerfileContext>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Serilog.AspNetCore" Version="6.0.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="6.0.0" />
+		<PackageReference Include="Serilog.AspNetCore" Version="6.0.0" />
+		<PackageReference Include="StackExchange.Redis" Version="2.6.122" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\BuildingBlocks\Common.Logging\Common.Logging.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\BuildingBlocks\Common.Logging\Common.Logging.csproj" />
+		<ProjectReference Include="..\..\BuildingBlocks\Contracts\Contracts.csproj" />
+		<ProjectReference Include="..\..\BuildingBlocks\Infrastructure\Infrastructure.csproj" />
+	</ItemGroup>
 
 </Project>
