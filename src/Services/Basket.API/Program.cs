@@ -27,8 +27,8 @@ try
         app.UseSwagger();
         app.UseSwaggerUI();
     }
-
-    app.UseHttpsRedirection();
+    //Just suiltable for https production
+    //app.UseHttpsRedirection();
 
     app.UseAuthorization();
 
