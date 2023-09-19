@@ -20,7 +20,9 @@
 
 # Main port For Running on Docker Enviroment
 1. Product.API : http://localhost:6002 (Local Enviroment: http://localhost:5002)
-1. Customer.API : http://localhost:6003 (Local Enviroment: http://localhost:5003)
+2. Customer.API : http://localhost:6003 (Local Enviroment: http://localhost:5003)
+3. Baseket.API : http://localhost:6004 (Local Enviroment: http://localhost:5004)
+4. Ordering.API : http://localhost:6005 (Local Enviroment: http://localhost:5005)
 
 # Build Command CLI
 docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d --remove-orphans --build
@@ -42,3 +44,9 @@ and after download redis successfully and it will be located in Program Files
 + lindex {yourkey} 0: get first value that you push in list
 + lrange {yourkey} 0 -1: get all value of list
 
+#About Clean Achitechture
+-It's quite same Abp Framwork structure 
+- Application 
+- Domain 
+- Infrastruture 
+- Host Api (Main API) 
