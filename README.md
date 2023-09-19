@@ -44,7 +44,7 @@ and after download redis successfully and it will be located in Program Files
 + lindex {yourkey} 0: get first value that you push in list
 + lrange {yourkey} 0 -1: get all value of list
 
-#About Clean Achitechture
+# About Clean Achitechture
 -It's quite same Abp Framwork structure 
 - Application 
 - Domain 
