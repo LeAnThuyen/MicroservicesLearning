@@ -1,12 +1,12 @@
 using Common.Logging;
+using Ordering.Infrastructure;
 using Serilog;
-
 Log.Logger = new LoggerConfiguration().WriteTo.Console().CreateBootstrapLogger();
 Log.Information("Starting Ordering API By Tana Command Pro !");
 try
 {
     var builder = WebApplication.CreateBuilder(args);
-
+    builder.Services.AddInfrastructureServices(builder.Configuration);
     // DI Serilog
     builder.Host.UseSerilog(Serilogger.Configure);
 
