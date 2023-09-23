@@ -14,6 +14,8 @@ namespace Ordering.Infrastructure
             {
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString"));
             });
+
+            services.AddScoped<OrderContextSeed>();
             return services;
         }
     }

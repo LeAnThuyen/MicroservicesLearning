@@ -1,6 +1,5 @@
 ﻿using Contracts.Domains.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using System.Reflection;
 
 namespace Ordering.Infrastructure.Persistence
@@ -8,27 +7,19 @@ namespace Ordering.Infrastructure.Persistence
     public class OrderContext : DbContext
     {
 
-        private readonly IConfiguration _configuration;
+
 
         public OrderContext(DbContextOptions<OrderContext> options) : base(options)
         {
 
         }
 
-        public OrderContext(IConfiguration configuration)
-        {
-            _configuration = configuration;
-        }
-
-        public DbSet<Ordering.Domain.Entities.Order> Ordrers { get; set; }
 
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=localhost,1435;Port=5433;Database=OrderDb;User Id=sa;Password=PassWOrd!;");
+        public DbSet<Ordering.Domain.Entities.Order> Orders { get; set; }
 
-            base.OnConfiguring(optionsBuilder);
-        }
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

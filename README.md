@@ -45,8 +45,14 @@ and after download redis successfully and it will be located in Program Files
 + lrange {yourkey} 0 -1: get all value of list
 
 # About Clean Achitechture
--It's quite same Abp Framwork structure 
+- It's quite same Abp Framwork structure 
 - Application 
 - Domain 
 - Infrastruture 
 - Host Api (Main API) 
+
+# About Entity Framework CLI
+- To do create a migration, you can use two cli command below here and you must cd to root folder which has your project (Ordering.Infrastucture and Ordering.Api). Ordering.Api as a host to run command and another side, Ordering.Infrastructure contain OrderContext
+- Firstly, dotnet ef migrations add "{Your migration name that you wanna named}" -p Ordering.Infrastructure --startup-project Ordering.Api -o Persistence/Migrations ( -p (FullName is project) : it's mean Project target contain Context File, -o (-o is output dir) which is folder that you want Context file contained in there))
+- Secondly, dotnet ef database update -p Ordering.Infrastructure --startup-project Ordering.Api ( Inorder to updating your mirgration)
+- Learn more about Entity Framework core : https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx (Highly Recomment use Fluent API -> Code Firt -> DatabaseFirst)

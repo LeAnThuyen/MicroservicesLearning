@@ -1,4 +1,5 @@
 ﻿using Contracts;
+using Ordering.Domain.Enums;
 
 namespace Ordering.Domain.Entities
 {
@@ -11,5 +12,6 @@ namespace Ordering.Domain.Entities
         public string ShippingAddress { get; set; }
         public string InvoiceAddress { get; set; }
         public decimal TotalPrice { get; set; }
+        public EOrderStatus Status { get; set; }
     }
 }
