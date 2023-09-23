@@ -6,7 +6,7 @@ Log.Information("Starting Ordering API By Tana Command Pro !");
 try
 {
     var builder = WebApplication.CreateBuilder(args);
-    builder.Services.AddInfrastructureServices(builder.Configuration);
+    builder.Services.AddInfrastructureService(builder.Configuration);
     // DI Serilog
     builder.Host.UseSerilog(Serilogger.Configure);
 
