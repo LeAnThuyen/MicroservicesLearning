@@ -3,16 +3,26 @@ using System.Reflection;
 
 namespace Ordering.Application.Common.Mappings
 {
-    public class MappingProfile
+    public class MappingProfile : Profile
     {
+        public MappingProfile()
+        {
+            ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
+        }
 
         private void ApplyMappingsFromAssembly(Assembly assembly)
         {
             var mapFromType = typeof(IMapFrom<>);
-            const string mappingMethodName = nameof(IMapFrom<Object>.Mapping);
 
-            bool HasInterfaces(Type t) => t.IsGenericType && t.GetGenericTypeDefinition() == mapFromType;
-            var types = assembly.GetExportedTypes().Where(c => c.GetInterfaces().Any(HasInterfaces)).ToList();
+            const string mappingMethodName = nameof(IMapFrom<object>.Mapping);
+
+            bool HasInterface(Type t) => t.IsGenericType
+                                         && t.GetGenericTypeDefinition() == mapFromType;
+
+            var types = assembly.GetExportedTypes()
+                .Where(t => t.GetInterfaces()
+                    .Any(HasInterface)).ToList();
+
             var argumentTypes = new Type[] { typeof(Profile) };
 
             foreach (var type in types)
@@ -28,7 +38,7 @@ namespace Ordering.Application.Common.Mappings
                 else
                 {
                     var interfaces = type.GetInterfaces()
-                        .Where(HasInterfaces).ToList();
+                        .Where(HasInterface).ToList();
 
                     if (interfaces.Count <= 0) continue;
 

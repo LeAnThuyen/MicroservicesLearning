@@ -19,7 +19,6 @@
 	<ItemGroup>
 		<ProjectReference Include="..\..\..\BuildingBlocks\Shared\Shared.csproj" />
 		<ProjectReference Include="..\Ordering.Domain\Ordering.Domain.csproj" />
-		<ProjectReference Include="..\Ordering.Infrastructure\Ordering.Infrastructure.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

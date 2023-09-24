@@ -1,5 +1,6 @@
 ﻿using Ordering.Application.Common.Mappings;
 using Ordering.Domain.Entities;
+using Ordering.Domain.Enums;
 
 namespace Ordering.Application.Common.Models
 {
@@ -13,6 +14,6 @@ namespace Ordering.Application.Common.Models
         public string ShippingAddress { get; set; }
         public string InvoiceAddress { get; set; }
         public decimal TotalPrice { get; set; }
-        public int Status { get; set; }
+        public EOrderStatus Status { get; set; }
     }
 }
