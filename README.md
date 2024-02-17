@@ -58,3 +58,6 @@ and after download redis successfully and it will be located in Program Files
 - Learn more about Entity Framework core : https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx (Highly Recomment use Fluent API -> Code Firt -> DatabaseFirst)
 # Tana when the king is back - killin it
 
+# More than about Dotnet Ef
+- dotnet ef migrations add {Name of Migration} to create new migration
+- dotnet ef database update to update latest migration version that you wanna migrate.

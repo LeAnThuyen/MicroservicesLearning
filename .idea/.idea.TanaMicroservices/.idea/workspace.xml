@@ -16,7 +16,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16edadf4-e0b4-4e81-852c-152e9f2af372" name="Changes" comment="" />
+    <list default="true" id="16edadf4-e0b4-4e81-852c-152e9f2af372" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TanaMicroservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TanaMicroservices/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Customer.API/Customer.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Customer.API/Customer.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Customer.API/Migrations/20230904044228_InitialCustomerDatavbase.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Customer.API/Migrations/20230904044228_InitialCustomerDatavbase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Customer.API/Migrations/CustomerContextModelSnapshot.cs" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,29 +46,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.Product.API.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Tana&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.Customer.API.executor": "Run",
+    ".NET Launch Settings Profile.Product.API.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "do_not_show_solution_notification": "true",
+    "git-widget-placeholder": "Tana",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/tana/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/tana/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache&quot;,
-      &quot;/Users/tana/.local/share/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/tana/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
+      "/Users/tana/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache",
+      "/Users/tana/.local/share/Symbols/src"
     ]
   }
-}</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Product.API">
+}]]></component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.Customer.API">
     <configuration name="Basket.API" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/Services/Basket.API/Basket.API.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
@@ -225,6 +233,9 @@
       <workItem from="1705848897021" duration="2016000" />
       <workItem from="1705922874567" duration="3768000" />
       <workItem from="1706691438618" duration="674000" />
+      <workItem from="1706692179796" duration="1655000" />
+      <workItem from="1707107067940" duration="2498000" />
+      <workItem from="1708154427528" duration="1643000" />
     </task>
     <servers />
   </component>

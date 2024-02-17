@@ -11,8 +11,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Customer.API.Migrations
 {
     [DbContext(typeof(CustomerContext))]
-    [Migration("20230904044228_InitialCustomerDatavbase")]
-    partial class InitialCustomerDatavbase
+    [Migration("20240217074615_InitialCustomerDB")]
+    partial class InitialCustomerDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
