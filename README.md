@@ -12,17 +12,17 @@
 2. update-database 
 3. docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d --remove-orphans (chế độ chạy ở local không build)
 
-# Main port For Running on Local Enviroment
+# Main port For Running on Local Environment
 1.Portainer: http://localhost:9000 - username:admin - password : anthuyenle08
 2.Kibana: http://localhost:5601 - username:elastic - password : admin
 3.RabbitMq: http://localhost:15672 - username:guest - password : guest
 4.Postgres: http://localhost:5050/browser/ - username:admin - password : admin1234
 
-# Main port For Running on Docker Enviroment
-1. Product.API : http://localhost:6002 (Local Enviroment: http://localhost:5002)
-2. Customer.API : http://localhost:6003 (Local Enviroment: http://localhost:5003)
-3. Basket.API : http://localhost:6004 (Local Enviroment: http://localhost:5004)
-4. Ordering.API : http://localhost:6005 (Local Enviroment: http://localhost:5005)
+# Main port For Running on Docker Environment
+1. Product.API : http://localhost:6002/swagger/index.html (Local Environment: http://localhost:5002)
+2. Customer.API : http://localhost:6003 (Local Environment: http://localhost:5003)
+3. Basket.API : http://localhost:6004/swagger/index.html (Local graEnvironment: http://localhost:5004)
+4. Ordering.API : http://localhost:6005 (Local Environment: http://localhost:5005)
 
 # Build Command CLI
 docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d --remove-orphans --build
@@ -43,21 +43,31 @@ and after download redis successfully and it will be located in Program Files
 + lpush {yourkey} {value1 value2 ...}: create a list 
 + lindex {yourkey} 0: get first value that you push in list
 + lrange {yourkey} 0 -1: get all value of list
++ 
+# Install Redis for MacOS
+1. Checking version of Home brew by the following cli " brew --version "
+2. Install redis " brew install redis "
+3. Run command " redis-server " to checking install successfully Redis on MacOS 
+* Learn more about Redis cli
+- keys * (select all key stored in redis)
+- hgetall (select your value of key if it is hash)
+- del {name of  your key} (delete key has stored)
+- type {name of your key} check type of your key has stored
 
 # About Clean Architecture
-- It's quite same Abp Framwork structure 
+- It's quite same Abp Framework structure 
 - Application 
 - Domain 
 - Infrastructure 
 - Host Api (Main API) 
 
 # About Entity Framework CLI
-- To do create a migration, you can use two cli command below here and you must cd to root folder which has your project (Ordering.Infrastucture and Ordering.Api). Ordering.Api as a host to run command and another side, Ordering.Infrastructure contain OrderContext
+- To do create a migration, you can use two cli command below here and you must cd to root folder which has your project (Ordering. Infrastructure and Ordering.Api). Ordering.Api as a host to run command and another side, Ordering.Infrastructure contain OrderContext
 - Firstly, dotnet ef migrations add "{Your migration name that you wanna named}" -p Ordering.Infrastructure --startup-project Ordering.Api -o Persistence/Migrations ( -p (FullName is project) : it's mean Project target contain Context File, -o (-o is output dir) which is folder that you want Context file contained in there))
-- Secondly, dotnet ef database update -p Ordering.Infrastructure --startup-project Ordering.Api ( Inorder to updating your mirgration)
-- Learn more about Entity Framework core : https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx (Highly Recomment use Fluent API -> Code Firt -> DatabaseFirst)
+- Secondly, dotnet ef database update -p Ordering.Infrastructure --startup-project Ordering.Api ( Inorder to updating your migration)
+- Learn more about Entity Framework core : https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx (Highly Recommend use Fluent API -> Code First -> DatabaseFirst)
 # Tana when the king is back - killin it
-
+- Backup times (Product API, Customer API, Basket API, Ordering API)
 # More than about Dotnet Ef
 - dotnet ef migrations add {Name of Migration} to create new migration
 - dotnet ef database update to update latest migration version that you wanna migrate.

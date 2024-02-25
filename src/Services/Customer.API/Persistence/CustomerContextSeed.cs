@@ -8,7 +8,7 @@ namespace Customer.API.Persistence
         {
             using var scope = host.Services.CreateScope();
             var customerContext = scope.ServiceProvider.GetRequiredService<CustomerContext>();
-            customerContext.Database.MigrateAsync().GetAwaiter().GetResult();
+          
             CreateCustomer(customerContext, "cus1001", "Le",
               "An Thuyen", "leanthuyen@gmail.com")
           .GetAwaiter().GetResult();

@@ -16,7 +16,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16edadf4-e0b4-4e81-852c-152e9f2af372" name="Changes" comment="" />
+    <list default="true" id="16edadf4-e0b4-4e81-852c-152e9f2af372" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TanaMicroservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TanaMicroservices/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Customer.API/Persistence/CustomerContextSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Customer.API/Persistence/CustomerContextSeed.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +28,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/165d4228555749f0a679bb591bc6b27124400/cd/1c46505e/EndpointMetadataApiExplorerServiceCollectionExtens.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/91c68e7dbd3550854d7e2c9a886f4aa32eeb553742cef4cbbad0f26217b1cb/DistributedCacheExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -40,31 +48,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.Customer.API.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Product.API.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;do_not_show_solution_notification&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Tana&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.Basket.API.executor": "Run",
+    ".NET Launch Settings Profile.Customer.API.executor": "Run",
+    ".NET Launch Settings Profile.Ordrering.API.executor": "Run",
+    ".NET Launch Settings Profile.Product.API.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "do_not_show_solution_notification": "true",
+    "git-widget-placeholder": "Develop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/tana/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/tana/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache&quot;,
-      &quot;/Users/tana/.local/share/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/tana/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
+      "/Users/tana/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache",
+      "/Users/tana/.local/share/Symbols/src"
     ]
   }
-}</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Customer.API">
+}]]></component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.Ordrering.API">
     <configuration name="Basket.API" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/Services/Basket.API/Basket.API.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
@@ -230,6 +240,7 @@
       <workItem from="1706692179796" duration="1655000" />
       <workItem from="1707107067940" duration="2498000" />
       <workItem from="1708154427528" duration="1643000" />
+      <workItem from="1708837579354" duration="4379000" />
     </task>
     <servers />
   </component>
@@ -239,6 +250,38 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Services/Customer.API/Persistence/CustomerContextSeed.cs</url>
+          <line>7</line>
+          <properties documentPath="$PROJECT_DIR$/src/Services/Customer.API/Persistence/CustomerContextSeed.cs" initialLine="7" containingFunctionPresentation="Method 'SeedCustomerData'">
+            <startOffsets>
+              <option value="195" />
+            </startOffsets>
+            <endOffsets>
+              <option value="196" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Services/Basket.API/Repositories/BasketRepository.cs</url>
+          <line>43</line>
+          <properties documentPath="$PROJECT_DIR$/src/Services/Basket.API/Repositories/BasketRepository.cs" initialLine="43" containingFunctionPresentation="Method 'GetBasketByUsername'">
+            <startOffsets>
+              <option value="1531" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1592" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
