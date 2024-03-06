@@ -71,3 +71,5 @@ and after download redis successfully and it will be located in Program Files
 # More than about Dotnet Ef
 - dotnet ef migrations add {Name of Migration} to create new migration
 - dotnet ef database update to update latest migration version that you wanna migrate.
+# Secret password 
+- pjka btgu hxtj kmoj

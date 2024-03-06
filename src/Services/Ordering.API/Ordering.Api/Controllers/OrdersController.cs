@@ -5,6 +5,8 @@ using Ordering.Application.Common.Models;
 using Ordering.Application.Features.V1.Orders.Queries.GetOrders;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
+using Ordering.Infrastructure.Services;
+using Shared.Services.Email;
 
 namespace Ordrering.API.Controllers
 {
@@ -16,11 +18,13 @@ namespace Ordrering.API.Controllers
 
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
+        private readonly ISmtpEmailService _emailService;
 
-        public OrdersController(IMediator mediator, IMapper mapper)
+        public OrdersController(IMediator mediator, IMapper mapper, ISmtpEmailService emailService)
         {
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
             _mapper = mapper;
+            _emailService = emailService;
         }
 
 
@@ -35,6 +39,20 @@ namespace Ordrering.API.Controllers
             var query = new GetOrdersQuery(userName);
             var result = await _mediator.Send(query);
             return Ok(result);
+        }
+        [HttpGet]
+       
+        public async Task<IActionResult> TestMail()
+        {
+            var message = new MailRequest
+            {
+                Body = "<h2>hello world</h2>",
+                Subject = "Tana when the king is back!",
+                ToAddress = "leanthuyen08122002@gmail.com"
+
+            };
+            await _emailService.SendEmailAsync(message);
+            return Ok();
         }
     }
 }

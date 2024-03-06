@@ -17,9 +17,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16edadf4-e0b4-4e81-852c-152e9f2af372" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Configurations/IEmailSMTPSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Services/IEmailServices.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Shared/Services/Email/MailRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Extentions/HostExtentions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Extentions/ServiceExtentions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Configurations/SmtpEmailSetting.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Services/ISmtpEmailService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Services/SmtpEmailService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TanaMicroservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TanaMicroservices/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Customer.API/Persistence/CustomerContextSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Customer.API/Persistence/CustomerContextSeed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Contracts.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Contracts.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildingBlocks/Shared/Shared.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildingBlocks/Shared/Shared.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Controllers/OrdersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Controllers/OrdersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/ConfigureSevices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/ConfigureSevices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Ordering.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Ordering.Infrastructure.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +45,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/165d4228555749f0a679bb591bc6b27124400/cd/1c46505e/EndpointMetadataApiExplorerServiceCollectionExtens.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/360924412aaf4b29bffdb126448f2f00209800/20/12809d9a/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6cc6dede52aab6345bbde5d36881fd55b017f53c84c78824d182f9a62c8291f/ISender.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/74593cffda1e21b56a94f6f59cddd42c17913e780fbd31c3cd6f1d9455b59f4/IRequest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/91c68e7dbd3550854d7e2c9a886f4aa32eeb553742cef4cbbad0f26217b1cb/DistributedCacheExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -38,12 +55,15 @@
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2bGjPYMKX1y9EVIs9xKhkFMqHFQ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -57,13 +77,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "do_not_show_solution_notification": "true",
-    "git-widget-placeholder": "Develop",
+    "git-widget-placeholder": "Tana",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -241,6 +261,9 @@
       <workItem from="1707107067940" duration="2498000" />
       <workItem from="1708154427528" duration="1643000" />
       <workItem from="1708837579354" duration="4379000" />
+      <workItem from="1709408236961" duration="132000" />
+      <workItem from="1709736658338" duration="14000" />
+      <workItem from="1709736754108" duration="11313000" />
     </task>
     <servers />
   </component>
@@ -279,6 +302,58 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Controllers/OrdersController.cs</url>
+          <line>39</line>
+          <properties documentPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Controllers/OrdersController.cs" initialLine="35" containingFunctionPresentation="Method 'GetOrderByUserNameAsync'">
+            <startOffsets>
+              <option value="1346" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1387" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Queries/GetOrders/GetOrdersQueryHandler.cs</url>
+          <line>24</line>
+          <properties documentPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Queries/GetOrders/GetOrdersQueryHandler.cs" initialLine="24" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="902" />
+            </startOffsets>
+            <endOffsets>
+              <option value="977" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Services/SmtpEmailService.cs</url>
+          <line>50</line>
+          <properties documentPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Services/SmtpEmailService.cs" initialLine="50" containingFunctionPresentation="Method 'SendEmailAsync'">
+            <startOffsets>
+              <option value="1776" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1837" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Services/SmtpEmailService.cs</url>
+          <line>49</line>
+          <properties documentPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Services/SmtpEmailService.cs" initialLine="49" containingFunctionPresentation="Method 'SendEmailAsync'">
+            <startOffsets>
+              <option value="1668" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1763" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

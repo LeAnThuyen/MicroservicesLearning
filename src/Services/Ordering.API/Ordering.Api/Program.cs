@@ -2,13 +2,19 @@ using Common.Logging;
 using Ordering.Application;
 using Ordering.Infrastructure;
 using Ordering.Infrastructure.Persistence;
+using Ordrering.API.Extentions;
 using Serilog;
 var builder = WebApplication.CreateBuilder(args);
 
 Log.Information($"Start {builder.Environment.ApplicationName} up");
-
-
+// Add Middleware Appsettings 
+builder.Host.AddAppConfigurations();
+// Add Middleware SMTP Email 
+builder.Services.AddConfigurationServiceSettings(builder.Configuration);
+// Add Middleware Service 
 builder.Services.AddInfrastructureService(builder.Configuration);
+
+builder.Services.AddApplicationServices();
 builder.Services.AddApplicationServices();
 // DI Serilog
 builder.Host.UseSerilog(Serilogger.Configure);
