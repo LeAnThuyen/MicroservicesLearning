@@ -4,6 +4,8 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<RootNamespace>Ordrering.API</RootNamespace>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -25,6 +27,12 @@
 		<ProjectReference Include="..\..\..\BuildingBlocks\Common.Logging\Common.Logging.csproj" />
 		<ProjectReference Include="..\Ordering.Application\Ordering.Application.csproj" />
 		<ProjectReference Include="..\Ordering.Infrastructure\Ordering.Infrastructure.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="..\..\..\..\.dockerignore">
+	    <Link>.dockerignore</Link>
+	  </Content>
 	</ItemGroup>
 
 </Project>

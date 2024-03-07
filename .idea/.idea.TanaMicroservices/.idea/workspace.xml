@@ -17,23 +17,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16edadf4-e0b4-4e81-852c-152e9f2af372" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Configurations/IEmailSMTPSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Services/IEmailServices.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Shared/Services/Email/MailRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Extentions/HostExtentions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Extentions/ServiceExtentions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Configurations/SmtpEmailSetting.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Services/ISmtpEmailService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Services/SmtpEmailService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TanaMicroservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TanaMicroservices/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Contracts.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Contracts.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BuildingBlocks/Shared/Shared.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildingBlocks/Shared/Shared.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Controllers/OrdersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Controllers/OrdersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/ConfigureSevices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/ConfigureSevices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Ordering.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Ordering.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanaMicroservices.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TanaMicroservices.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Ordrering.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Ordering.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/docker-compose.override.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,32 +58,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Basket.API.executor": "Run",
-    ".NET Launch Settings Profile.Customer.API.executor": "Run",
-    ".NET Launch Settings Profile.Ordrering.API.executor": "Run",
-    ".NET Launch Settings Profile.Product.API.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "do_not_show_solution_notification": "true",
-    "git-widget-placeholder": "Tana",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Basket.API.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.Customer.API.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.Ordrering.API.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.Product.API.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;do_not_show_solution_notification&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Tana&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/tana/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
-      "/Users/tana/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache",
-      "/Users/tana/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/tana/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/tana/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache&quot;,
+      &quot;/Users/tana/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Ordrering.API">
     <configuration name="Basket.API" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/Services/Basket.API/Basket.API.csproj" />
@@ -156,7 +146,7 @@
       </method>
     </configuration>
     <configuration name="Ordrering.API" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Ordrering.API.csproj" />
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Ordering.API.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
       <option name="LAUNCH_PROFILE_NAME" value="Ordrering.API" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -224,6 +214,27 @@
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="true" />
       <method v="2" />
     </configuration>
+    <configuration name="Ordering.Api/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="ordrering.api" />
+          <option name="containerName" value="ordrering.api" />
+          <option name="contextFolderPath" value="$PROJECT_DIR$" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="80" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="8080" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="sourceFilePath" value="src/Services/Ordering.API/Ordering.Api/Dockerfile" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="Product.API/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -236,9 +247,22 @@
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="true" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
         <settings />
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
       </deployment>
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
@@ -263,7 +287,8 @@
       <workItem from="1708837579354" duration="4379000" />
       <workItem from="1709408236961" duration="132000" />
       <workItem from="1709736658338" duration="14000" />
-      <workItem from="1709736754108" duration="11313000" />
+      <workItem from="1709736754108" duration="12131000" />
+      <workItem from="1709825494080" duration="10192000" />
     </task>
     <servers />
   </component>

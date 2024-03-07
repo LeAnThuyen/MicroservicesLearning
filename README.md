@@ -19,10 +19,10 @@
 4.Postgres: http://localhost:5050/browser/ - username:admin - password : admin1234
 
 # Main port For Running on Docker Environment
-1. Product.API : http://localhost:6002/swagger/index.html (Local Environment: http://localhost:5002)
+1. Product.API : http://localhost:6002/swagger/index.html (Local Environment: http://localhost:5002/swagger/index.html)
 2. Customer.API : http://localhost:6003 (Local Environment: http://localhost:5003)
-3. Basket.API : http://localhost:6004/swagger/index.html (Local graEnvironment: http://localhost:5004)
-4. Ordering.API : http://localhost:6005 (Local Environment: http://localhost:5005)
+3. Basket.API : http://localhost:6004/swagger/index.html (Local graEnvironment: http://localhost:5004/swagger/index.html)
+4. Ordering.API : http://localhost:6005/swagger/index.html (Local Environment: http://localhost:5005/swagger/index.html)
 
 # Build Command CLI
 docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d --remove-orphans --build
@@ -73,3 +73,33 @@ and after download redis successfully and it will be located in Program Files
 - dotnet ef database update to update latest migration version that you wanna migrate.
 # Secret password 
 - pjka btgu hxtj kmoj
+# All of step to write a Dockerfile for csproj file
+1. Include dotnet version and dotnet sdk version like command below
+
+   FROM mcr.microsoft.com/dotnet/aspnet:6.0 as base
+   WORKDIR /app
+   EXPOSE 80
+
+   FROM mcr.microsoft.com/dotnet/sdk:6.0 as build
++ "as base" and "as build". as base is the base dotnet version of csproj file. as build is the environment of this one to build csproj file (Force same version with base).
+
+2. Let's Copy all of path reference of csproj file and write like below
+   COPY ["{ Typing your path of csproj file. example: Services/Ordering.API/Ordering.Api/Ordering.API.csproj }","{ Typing your path of csproj file and remove from start of path csproj file such as Services/Ordering.API/Ordering.Api/ }"]
++ do similar for all remaining reference
+
+3. Running command build and publish
+
+   RUN dotnet restore "{ Type your path of csproj. example: Services/Ordering.API/Ordering.Application/Ordering.Application.csproj } "
+   COPY . .
+   WORKDIR "{ Type your path of csproj and remove from start of csproj file. example: /src/Services/Ordering.API/Ordering.Api/ }"
+   RUN dotnet build "{ Type your csproj file name. example: Ordering.API.csproj }" -c Release -o /app/build
+
+
+   FROM build as publish
+   RUN dotnet publish "{ Type your csproj file name. example: Ordering.API.csproj }" -c Release -o /app/publish
+   FROM base as final
+
+5. Last step, copy all files were published and run it 
+   WORKDIR /app
+   COPY --from=publish /app/publish .
+   ENTRYPOINT ["dotnet","{Type your name of csproj file and following by end of .dll, example Ordering.API.dll"]

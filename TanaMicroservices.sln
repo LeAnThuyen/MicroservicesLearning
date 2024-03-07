@@ -66,7 +66,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering.Infrastructure", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering.Domain", "Ordering.Domain", "{25568A68-9009-4A16-B60E-11AC750D20A6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordrering.API", "src\Services\Ordering.API\Ordering.Api\Ordrering.API.csproj", "{287B7F09-69F0-42AE-8DB0-6335A41FD8DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.API", "src\Services\Ordering.API\Ordering.Api\Ordering.API.csproj", "{287B7F09-69F0-42AE-8DB0-6335A41FD8DC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Application", "src\Services\Ordering.API\Ordering.Application\Ordering.Application.csproj", "{1C5A806C-2310-4D51-BC50-1D048419953E}"
 EndProject
