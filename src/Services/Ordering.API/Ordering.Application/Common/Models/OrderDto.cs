@@ -1,4 +1,5 @@
-﻿using Ordering.Application.Common.Mappings;
+﻿using AutoMapper;
+using Ordering.Application.Common.Mappings;
 using Ordering.Domain.Entities;
 using Ordering.Domain.Enums;
 
@@ -15,5 +16,11 @@ namespace Ordering.Application.Common.Models
         public string InvoiceAddress { get; set; }
         public decimal TotalPrice { get; set; }
         public EOrderStatus Status { get; set; }
+
+
+        public void Mapping(Profile profile)
+        {
+            profile.CreateMap<Order, OrderDto>().ReverseMap();
+        }
     }
 }

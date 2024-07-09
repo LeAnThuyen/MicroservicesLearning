@@ -1,6 +1,8 @@
 ﻿using Contracts.Common.Interfaces;
+using Contracts.Messages;
 using Contracts.Services;
 using Infrastructure.Common;
+using Infrastructure.Messages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,6 +27,8 @@ namespace Ordering.Infrastructure
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
             services.AddScoped(typeof(ISmtpEmailService), typeof(SmtpEmailService));
+            services.AddScoped<IMessageProducer,RabbitMQProducer>();
+            services.AddScoped<ISerializeService,SerializeService>();
             return services;
         }
     }

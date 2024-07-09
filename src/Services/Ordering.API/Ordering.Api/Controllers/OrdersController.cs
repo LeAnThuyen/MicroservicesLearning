@@ -5,8 +5,12 @@ using Ordering.Application.Common.Models;
 using Ordering.Application.Features.V1.Orders.Queries.GetOrders;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
+using Contracts.Messages;
+using Ordering.Application.Common.Interfaces;
+using Ordering.Domain.Entities;
 using Ordering.Infrastructure.Services;
 using Shared.Services.Email;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace Ordrering.API.Controllers
 {
@@ -19,12 +23,17 @@ namespace Ordrering.API.Controllers
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
         private readonly ISmtpEmailService _emailService;
+        private readonly IMessageProducer _messageProducer;
+        private readonly IOrderRepository _orderRepository;
 
-        public OrdersController(IMediator mediator, IMapper mapper, ISmtpEmailService emailService)
+       
+        public OrdersController(IMediator mediator, IMapper mapper, ISmtpEmailService emailService, IMessageProducer messageProducer, IOrderRepository orderRepository)
         {
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
             _mapper = mapper;
             _emailService = emailService;
+            _messageProducer = messageProducer ?? throw new ArgumentNullException(nameof(messageProducer));
+            _orderRepository = orderRepository;
         }
 
 
@@ -41,7 +50,6 @@ namespace Ordrering.API.Controllers
             return Ok(result);
         }
         [HttpGet]
-       
         public async Task<IActionResult> TestMail()
         {
             var message = new MailRequest
@@ -53,6 +61,19 @@ namespace Ordrering.API.Controllers
             };
             await _emailService.SendEmailAsync(message);
             return Ok();
+        }
+        
+        [HttpPost]
+        [SwaggerOperation(Summary = "RabbitMQ by An Thuyen Le")]
+        public async Task<IActionResult> CreateOrder(OrderDto orderDto)
+        {
+            var order = _mapper.Map<Order>(orderDto);
+            var addedOrder = await _orderRepository.CreateOrder(order);
+            await _orderRepository.SaveChangesAsync();
+    
+            var result = _mapper.Map<OrderDto>(addedOrder);
+            _messageProducer.SendMessages(result);
+            return Ok(result);
         }
     }
 }

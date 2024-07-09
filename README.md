@@ -18,6 +18,7 @@
 3.RabbitMq: http://localhost:15672 - username:guest - password : guest
 4.Postgres: http://localhost:5050/browser/ - username:admin - password : admin1234
 
+
 # Main port For Running on Docker Environment
 1. Product.API : http://localhost:6002/swagger/index.html (Local Environment: http://localhost:5002/swagger/index.html)
 2. Customer.API : http://localhost:6003 (Local Environment: http://localhost:5003)
