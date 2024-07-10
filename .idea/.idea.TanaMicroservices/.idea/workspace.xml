@@ -18,21 +18,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16edadf4-e0b4-4e81-852c-152e9f2af372" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Messages/IMessageProducer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Infrastructure/Messages/RabbitMQProducer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.Subscriber/Ordering.Subscriber.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/EventBus/EventBus.Messages/IIntegrationEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/EventBus/EventBus.Messages/IntegrationBaseEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/EventBus/EventBus.Messages/IntegrationEvents/Events/BasketCheckoutEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/EventBus/EventBus.Messages/IntegrationEvents/Interfaces/IBasketCheckoutEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Infrastructure/Extentions/ConfigurationExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Shared/Configurations/CacheSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Shared/Configurations/EventBusSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Basket.API/MappingProfile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TanaMicroservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TanaMicroservices/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TanaMicroservices.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TanaMicroservices.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildingBlocks/EventBus.Messages/EventBus.Messages.csproj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BuildingBlocks/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildingBlocks/Infrastructure/Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Controllers/OrdersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Controllers/OrdersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Ordering.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Ordering.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Common/Interfaces/IOrderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Common/Interfaces/IOrderRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Common/Models/OrderDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Common/Models/OrderDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/ConfigureSevices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/ConfigureSevices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Repositories/OrderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Repositories/OrderRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/docker-compose.override.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Basket.API/Basket.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Basket.API/Basket.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Basket.API/Controllers/BasketsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Basket.API/Controllers/BasketsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Basket.API/Extensions/ServiceExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Basket.API/Extensions/ServiceExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Basket.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Basket.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Basket.API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Basket.API/appsettings.Development.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +63,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/Services/Ordering.Subscriber/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9c41c2878b63412a8605adfe30d8ff62209800/65/e26cc8a8/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9c41c2878b63412a8605adfe30d8ff62209800/91/2958c0f2/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -83,13 +87,13 @@
   "keyToString": {
     ".NET Launch Settings Profile.Basket.API.executor": "Debug",
     ".NET Launch Settings Profile.Customer.API.executor": "Run",
-    ".NET Launch Settings Profile.Ordrering.API.executor": "Run",
+    ".NET Launch Settings Profile.Ordrering.API.executor": "Debug",
     ".NET Launch Settings Profile.Product.API.executor": "Run",
-    ".NET Project.Odering.Subscriber.executor": "Run",
+    ".NET Project.Odering.Subscriber.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "do_not_show_solution_notification": "true",
-    "git-widget-placeholder": "Develop",
+    "git-widget-placeholder": "Tana",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -106,7 +110,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Project.Odering.Subscriber">
+  <component name="RunManager" selected=".NET Launch Settings Profile.Basket.API">
     <configuration name="Odering.Subscriber" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -337,7 +341,7 @@
       <workItem from="1715429228105" duration="2210000" />
       <workItem from="1716969844797" duration="680000" />
       <workItem from="1716979297170" duration="992000" />
-      <workItem from="1720507598120" duration="10139000" />
+      <workItem from="1720507598120" duration="18317000" />
     </task>
     <servers />
   </component>
@@ -431,19 +435,6 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Controllers/OrdersController.cs</url>
-          <line>68</line>
-          <properties documentPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Controllers/OrdersController.cs" containingFunctionPresentation="Method 'CreateOrder'">
-            <startOffsets>
-              <option value="2507" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2508" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/Services/Ordering.Subscriber/Program.cs</url>
           <line>15</line>
           <properties documentPath="$PROJECT_DIR$/src/Services/Ordering.Subscriber/Program.cs" containingFunctionPresentation="">
@@ -454,20 +445,7 @@
               <option value="474" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Services/Ordering.Subscriber/Program.cs</url>
-          <line>9</line>
-          <properties documentPath="$PROJECT_DIR$/src/Services/Ordering.Subscriber/Program.cs" containingFunctionPresentation="">
-            <startOffsets>
-              <option value="197" />
-            </startOffsets>
-            <endOffsets>
-              <option value="250" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="12" />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
