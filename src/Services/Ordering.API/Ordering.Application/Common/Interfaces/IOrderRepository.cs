@@ -9,5 +9,7 @@ namespace Ordering.Application.Common.Interfaces
         Task<IEnumerable<Order>> GetOrdersByUserName(string userName);
         
         Task<Order> CreateOrder(Order order);
+        Task<Order> UpdateOrderAsync(Order order);
+        void DeleteOrder(Order order);
     }
 }

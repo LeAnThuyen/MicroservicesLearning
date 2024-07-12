@@ -24,5 +24,16 @@ namespace Ordering.Infrastructure.Repositories
             order.Id = id;
             return order;
         }
+
+        public async Task<Order> UpdateOrderAsync(Order order)
+        {
+            await UpdateAsync(order);
+            return order;
+        }
+
+        public void DeleteOrder(Order order)
+        {
+            //(order);
+        }
     }
 }

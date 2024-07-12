@@ -68,7 +68,7 @@ namespace Basket.API.Controllers
             eventMessage.TotalPrice = basket.TotalPrice;
             _publishEndpoint.Publish(eventMessage);
             // remove the user basket
-            await _repository.DeleteBasketFromUsername(basketCheckout.UserName);
+         //   await _repository.DeleteBasketFromUsername(basketCheckout.UserName);
             return Accepted();
 
         }

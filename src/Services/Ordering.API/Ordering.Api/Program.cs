@@ -13,7 +13,8 @@ builder.Host.AddAppConfigurations();
 builder.Services.AddConfigurationServiceSettings(builder.Configuration);
 // Add Middleware Service 
 builder.Services.AddInfrastructureService(builder.Configuration);
-
+// Add Masstransit
+builder.Services.ConfigMasstransit();
 builder.Services.AddApplicationServices();
 builder.Services.AddApplicationServices();
 // DI Serilog

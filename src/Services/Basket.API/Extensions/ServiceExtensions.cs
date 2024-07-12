@@ -31,7 +31,7 @@ namespace Basket.API.Extensions
             {
                 throw new ArgumentNullException("Redis Connectionstring is not configured.");
             }
-            // Redisconfiguration
+            // Redis configuration
             services.AddStackExchangeRedisCache(options =>
             {
                 options.Configuration = settings.ConnectionString;
