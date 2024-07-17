@@ -17,37 +17,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16edadf4-e0b4-4e81-852c-152e9f2af372" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Common/Events/AuditableEventEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Common/Events/BaseEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Common/Events/EventEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Common/Interfaces/IEventEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Infrastructure/Extentions/MediatorExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/OrdersDomainHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Domain/OrderAggregate/Event/OrderCreatedEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Domain/OrderAggregate/Event/OrderDeletedEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TanaMicroservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TanaMicroservices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Common/Interfaces/IRepositoryBaseAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Common/Interfaces/IRepositoryBaseAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Contracts.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Contracts.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BuildingBlocks/Infrastructure/Common/RepositoryBaseAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildingBlocks/Infrastructure/Common/RepositoryBaseAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Basket.API/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Basket.API/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Controllers/OrdersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Controllers/OrdersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Common/Models/OrderDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Common/Models/OrderDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/ConfigureServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Commands/CreateOrder/CreateOrderCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Commands/CreateOrder/CreateOrderCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Commands/DeleteOrder/DeleteOrderCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Commands/DeleteOrder/DeleteOrderCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Common/CreateOrUpdateCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Common/CreateOrUpdateCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Domain/Entities/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Domain/Entities/Order.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Persistence/Migrations/OrderContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Persistence/Migrations/OrderContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Persistence/OrderContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Persistence/OrderContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Persistence/OrderContextSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Persistence/OrderContextSeed.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Repositories/OrderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Repositories/OrderRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/docker-compose.override.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="16edadf4-e0b4-4e81-852c-152e9f2af372" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,33 +79,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.Basket.API.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.Customer.API.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Ordrering.API.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.Product.API.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Project.Odering.Subscriber.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;do_not_show_solution_notification&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Tana&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.Basket.API.executor": "Debug",
+    ".NET Launch Settings Profile.Customer.API.executor": "Run",
+    ".NET Launch Settings Profile.Ordrering.API.executor": "Debug",
+    ".NET Launch Settings Profile.Product.API.executor": "Run",
+    ".NET Project.Odering.Subscriber.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "do_not_show_solution_notification": "true",
+    "git-widget-placeholder": "Develop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.sync",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/tana/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/tana/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
-      &quot;/Users/tana/Library/Application Support/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/tana/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
+      "/Users/tana/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache",
+      "/Users/tana/Library/Application Support/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Ordrering.API">
     <configuration name="Odering.Subscriber" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
