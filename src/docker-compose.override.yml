@@ -83,7 +83,6 @@ services:
     container_name: portainer
     restart: always
     ports:
-      - "8080:8000"
       - "9000:9000"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -110,7 +109,19 @@ services:
     ports:
       - "5601:5601"
       
-      
+  jenkins:
+    container_name: jenkins
+    restart: always
+    privileged: true
+    user: root
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - /Users/tana/Documents/Jenkins:/var/jenkins_home
+#      - jenkins_data:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+
   #microservices api sections
   product.api:
     container_name: product.api
@@ -142,8 +153,10 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
       - "CacheSettings:ConnectionString=basketdb:6379"
+      - "EventBusSettings:HostAddress=amqp://guest:guest@localhost:5672"
     depends_on: 
       - basketdb
+      - rabbitmq
     ports:
       - "6004:80"
     restart: always
@@ -154,8 +167,11 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
       - "ConnectionStrings:DefaultConnectionString=Server=orderdb;Database=OrderDb;User Id=sa;Password=Passw0rd!;Multipleactiveresultsets=true"
+      - "EventBusSettings:HostAddress=amqp://guest:guest@localhost:5672"
+
     depends_on: 
       - orderdb
+      - rabbitmq
     ports:
       - "6005:80"
     restart: always

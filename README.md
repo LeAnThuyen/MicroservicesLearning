@@ -17,6 +17,7 @@
 2.Kibana: http://localhost:5601 - username:elastic - password : admin
 3.RabbitMq: http://localhost:15672 - username:guest - password : guest
 4.Postgres: http://localhost:5050/browser/ - username:admin - password : admin1234
+5.Jenkins: http://localhost:8080/ - username:thuyenla - password : anthuyenle08
 
 
 # Main port For Running on Docker Environment

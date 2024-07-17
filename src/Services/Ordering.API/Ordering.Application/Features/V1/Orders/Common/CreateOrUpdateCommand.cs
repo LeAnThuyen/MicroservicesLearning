@@ -9,6 +9,7 @@ namespace Ordering.Application.Features.V1.Orders.Common;
 public class CreateOrUpdateCommand:IMapFrom<Order>, IRequest<ApiResult<long>>
 {
     public string FirstName { get; set; }
+    public string DocumentNo { get; set; }
 
     public string LastName { get; set; }
     public string EmailAddress { get; set; }

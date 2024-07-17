@@ -18,24 +18,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16edadf4-e0b4-4e81-852c-152e9f2af372" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/EventBus/EventBus.Messages/IIntegrationEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/EventBus/EventBus.Messages/IntegrationBaseEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/EventBus/EventBus.Messages/IntegrationEvents/Events/BasketCheckoutEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/EventBus/EventBus.Messages/IntegrationEvents/Interfaces/IBasketCheckoutEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Infrastructure/Extentions/ConfigurationExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Shared/Configurations/CacheSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Shared/Configurations/EventBusSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Basket.API/MappingProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Common/Events/AuditableEventEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Common/Events/BaseEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Common/Events/EventEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Common/Interfaces/IEventEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Infrastructure/Extentions/MediatorExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/OrdersDomainHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Domain/OrderAggregate/Event/OrderCreatedEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Domain/OrderAggregate/Event/OrderDeletedEvent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TanaMicroservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TanaMicroservices/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanaMicroservices.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TanaMicroservices.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BuildingBlocks/EventBus.Messages/EventBus.Messages.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BuildingBlocks/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildingBlocks/Infrastructure/Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Basket.API/Basket.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Basket.API/Basket.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Basket.API/Controllers/BasketsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Basket.API/Controllers/BasketsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Basket.API/Extensions/ServiceExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Basket.API/Extensions/ServiceExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Basket.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Basket.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Basket.API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Basket.API/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Common/Interfaces/IRepositoryBaseAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Common/Interfaces/IRepositoryBaseAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Contracts.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildingBlocks/Contracts/Contracts.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildingBlocks/Infrastructure/Common/RepositoryBaseAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildingBlocks/Infrastructure/Common/RepositoryBaseAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Basket.API/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Basket.API/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Controllers/OrdersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Controllers/OrdersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Common/Models/OrderDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Common/Models/OrderDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/ConfigureServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Commands/CreateOrder/CreateOrderCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Commands/CreateOrder/CreateOrderCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Commands/DeleteOrder/DeleteOrderCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Commands/DeleteOrder/DeleteOrderCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Common/CreateOrUpdateCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Common/CreateOrUpdateCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Domain/Entities/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Domain/Entities/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Persistence/Migrations/OrderContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Persistence/Migrations/OrderContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Persistence/OrderContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Persistence/OrderContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Persistence/OrderContextSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Persistence/OrderContextSeed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Repositories/OrderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Repositories/OrderRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/docker-compose.override.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,16 +72,31 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/tana/Documents/MicroservicesLearning/src/BuildingBlocks/Contracts/Common/Interfaces/IRepositoryBaseAsync.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/tana/Documents/MicroservicesLearning/src/BuildingBlocks/Infrastructure/Common/RepositoryBaseAsync.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/tana/Documents/MicroservicesLearning/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Commands/CreateOrder/CreateOrderCommandHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Services/Ordering.Subscriber/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4459abf9c1844eadb609c88894b061e322800/f1/9774701e/ILoggerProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9c41c2878b63412a8605adfe30d8ff62209800/65/e26cc8a8/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9c41c2878b63412a8605adfe30d8ff62209800/91/2958c0f2/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f644c7c9f72c40cc9396b79fb381c62cb58200/01/5a8ae331/ConfiguredTaskAwaitable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f644c7c9f72c40cc9396b79fb381c62cb58200/3b/e5321013/ConfiguredTaskAwaitable`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f644c7c9f72c40cc9396b79fb381c62cb58200/57/96608294/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6cc6dede52aab6345bbde5d36881fd55b017f53c84c78824d182f9a62c8291f/ISender.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7415982338a3ccbd2a7a4eb483af627bda727e356b86bb32c5d4f6998f9c/IRequestHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/864d7accf04ab97b036c53401ed8fc546b5eeb1b153aac9a9e9d17b43d1/RegistrationExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b47317af1f57473b8219c834cb9f923e6f75aff79b8a65e6fa4fee618eb3eb/ScopeConsumerFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c1558d44394b3be0f45e5cfe17d84d06c60a9ea79543868636a2edb57c2342/IRequestHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d1f68ef86315497c7b39ddb155d5cf3ace964abca69857f9943cd58479799/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e1b3313fe25cf342bf679b765cbb1d115851595d7a1869fcdd32cec1cac1/ChannelExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e5b9c140912e8295f69159adbf39ad664d070868f2c2ae42d7e7dd1d92a9d4/ServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -83,34 +109,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Basket.API.executor": "Debug",
-    ".NET Launch Settings Profile.Customer.API.executor": "Run",
-    ".NET Launch Settings Profile.Ordrering.API.executor": "Debug",
-    ".NET Launch Settings Profile.Product.API.executor": "Run",
-    ".NET Project.Odering.Subscriber.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "do_not_show_solution_notification": "true",
-    "git-widget-placeholder": "Tana",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Basket.API.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.Customer.API.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.Ordrering.API.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.Product.API.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.Odering.Subscriber.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;do_not_show_solution_notification&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Tana&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/tana/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
-      "/Users/tana/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache",
-      "/Users/tana/Library/Application Support/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/tana/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/tana/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
+      &quot;/Users/tana/Library/Application Support/Symbols/src&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Basket.API">
+}</component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.Ordrering.API">
     <configuration name="Odering.Subscriber" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -341,7 +367,13 @@
       <workItem from="1715429228105" duration="2210000" />
       <workItem from="1716969844797" duration="680000" />
       <workItem from="1716979297170" duration="992000" />
-      <workItem from="1720507598120" duration="18317000" />
+      <workItem from="1720507598120" duration="26671000" />
+      <workItem from="1720599878347" duration="10340000" />
+      <workItem from="1720770637865" duration="9259000" />
+      <workItem from="1721038628441" duration="1475000" />
+      <workItem from="1721112293670" duration="28000" />
+      <workItem from="1721112333086" duration="13982000" />
+      <workItem from="1721187028102" duration="16040000" />
     </task>
     <servers />
   </component>
@@ -356,7 +388,7 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/Services/Customer.API/Persistence/CustomerContextSeed.cs</url>
           <line>7</line>
           <properties documentPath="$PROJECT_DIR$/src/Services/Customer.API/Persistence/CustomerContextSeed.cs" containingFunctionPresentation="Method 'SeedCustomerData'">
@@ -369,33 +401,20 @@
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Services/Basket.API/Repositories/BasketRepository.cs</url>
-          <line>43</line>
-          <properties documentPath="$PROJECT_DIR$/src/Services/Basket.API/Repositories/BasketRepository.cs" containingFunctionPresentation="Method 'GetBasketByUsername'">
-            <startOffsets>
-              <option value="1531" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1592" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Controllers/OrdersController.cs</url>
-          <line>48</line>
+          <line>49</line>
           <properties documentPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Controllers/OrdersController.cs" containingFunctionPresentation="Method 'GetOrderByUserNameAsync'">
             <startOffsets>
-              <option value="1844" />
+              <option value="1957" />
             </startOffsets>
             <endOffsets>
-              <option value="1885" />
+              <option value="1998" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Queries/GetOrders/GetOrdersQueryHandler.cs</url>
           <line>24</line>
           <properties documentPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Application/Features/V1/Orders/Queries/GetOrders/GetOrdersQueryHandler.cs" containingFunctionPresentation="Method 'Handle'">
@@ -408,7 +427,7 @@
           </properties>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Services/SmtpEmailService.cs</url>
           <line>50</line>
           <properties documentPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Services/SmtpEmailService.cs" containingFunctionPresentation="Method 'SendEmailAsync'">
@@ -421,7 +440,7 @@
           </properties>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Services/SmtpEmailService.cs</url>
           <line>49</line>
           <properties documentPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Infrastructure/Services/SmtpEmailService.cs" containingFunctionPresentation="Method 'SendEmailAsync'">
@@ -434,7 +453,7 @@
           </properties>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/Services/Ordering.Subscriber/Program.cs</url>
           <line>15</line>
           <properties documentPath="$PROJECT_DIR$/src/Services/Ordering.Subscriber/Program.cs" containingFunctionPresentation="">
@@ -447,6 +466,51 @@
           </properties>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
+        <line-breakpoint type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Services/Basket.API/Controllers/BasketsController.cs</url>
+          <line>61</line>
+          <properties documentPath="$PROJECT_DIR$/src/Services/Basket.API/Controllers/BasketsController.cs" containingFunctionPresentation="Method 'Checkout'">
+            <startOffsets>
+              <option value="2384" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2385" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Application/IntegrationEvent/EventHandler/BasketCheckoutEventHandler.cs</url>
+          <line>25</line>
+          <properties documentPath="$PROJECT_DIR$/src/Services/Ordering.API/Ordering.Api/Application/IntegrationEvent/EventHandler/BasketCheckoutEventHandler.cs" containingFunctionPresentation="Method 'Consume'">
+            <startOffsets>
+              <option value="788" />
+            </startOffsets>
+            <endOffsets>
+              <option value="830" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/BuildingBlocks/Infrastructure/Extentions/MediatorExtensions.cs</url>
+          <line>16</line>
+          <properties documentPath="$PROJECT_DIR$/src/BuildingBlocks/Infrastructure/Extentions/MediatorExtensions.cs" containingFunctionPresentation="Method 'DispatchDomainEventAsync'">
+            <startOffsets>
+              <option value="454" />
+            </startOffsets>
+            <endOffsets>
+              <option value="490" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="DotNet Exception Breakpoints">
+          <properties exception="System.TypeLoadException" isInternal="false" displayValue="TypeLoadException" namespaceName="System">
+            <option name="internal" value="false" />
+          </properties>
+          <option name="timeStamp" value="18" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

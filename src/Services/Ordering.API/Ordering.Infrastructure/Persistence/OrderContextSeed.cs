@@ -54,6 +54,7 @@ namespace Ordering.Infrastructure.Persistence
                 {
                     UserName = "Customer1",
                     FirstName = "Tana Fucking Hand Some",
+                    DocumentNo = "8yNsQR5cec",
                     LastName = "Le",
                     EmailAddress = "leanthuyen.working@gmail.com",
                     ShippingAddress = "Park Jang Inda Fucking Hood",
@@ -65,6 +66,7 @@ namespace Ordering.Infrastructure.Persistence
                     UserName = "Customer2",
                     FirstName = "An Thuyen",
                     LastName = "Le",
+                    DocumentNo = "d1YsC4gy78",
                     EmailAddress = "leanthuyen.working@gmail.com",
                     ShippingAddress = "Park Jang Inda Fucking Hood",
                     InvoiceAddress = "VietNam",
@@ -75,6 +77,7 @@ namespace Ordering.Infrastructure.Persistence
                     UserName = "Customer3",
                     FirstName = "Nhang An",
                     LastName = "Le",
+                    DocumentNo = "QuH0p9jTG9",
                     EmailAddress = "leanthuyen.working@gmail.com",
                     ShippingAddress = "Park Jang Inda Fucking Hood",
                     InvoiceAddress = "VietNam",

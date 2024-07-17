@@ -16,7 +16,6 @@ builder.Services.AddInfrastructureService(builder.Configuration);
 // Add Masstransit
 builder.Services.ConfigMasstransit();
 builder.Services.AddApplicationServices();
-builder.Services.AddApplicationServices();
 // DI Serilog
 builder.Host.UseSerilog(Serilogger.Configure);
 

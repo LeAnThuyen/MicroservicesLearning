@@ -7,8 +7,12 @@ using System.ComponentModel.DataAnnotations;
 using System.Net;
 using Contracts.Messages;
 using Ordering.Application.Common.Interfaces;
+using Ordering.Application.Features.V1.Orders.Commands.CreateOrder;
+using Ordering.Application.Features.V1.Orders.Commands.DeleteOrder;
+using Ordering.Application.Features.V1.Orders.Commands.UpdateOrder;
 using Ordering.Domain.Entities;
 using Ordering.Infrastructure.Services;
+using Shared.SeedWork;
 using Shared.Services.Email;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -37,10 +41,7 @@ namespace Ordrering.API.Controllers
         }
 
 
-        private static class RouteNames
-        {
-            public const string GetOrders = nameof(GetOrders);
-        }
+        
         [HttpGet("{userName}", Name = RouteNames.GetOrders)]
         [ProducesResponseType(typeof(IEnumerable<OrderDto>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<OrderDto>>> GetOrderByUserNameAsync([Required] string userName)
@@ -62,18 +63,49 @@ namespace Ordrering.API.Controllers
             await _emailService.SendEmailAsync(message);
             return Ok();
         }
-        
-        [HttpPost]
-        [SwaggerOperation(Summary = "RabbitMQ by An Thuyen Le")]
-        public async Task<IActionResult> CreateOrder(OrderDto orderDto)
+        private static class RouteNames
         {
-            var order = _mapper.Map<Order>(orderDto);
-            var addedOrder = await _orderRepository.CreateOrder(order);
-            await _orderRepository.SaveChangesAsync();
+            public const string GetOrders = nameof(GetOrders);
+            public const string CreateOrder = nameof(CreateOrder);
+            public const string UpdateOrder = nameof(UpdateOrder);
+            public const string DeleteOrder = nameof(DeleteOrder);
+        }
     
-            var result = _mapper.Map<OrderDto>(addedOrder);
-            _messageProducer.SendMessages(result);
+        [HttpPost(Name = RouteNames.CreateOrder)]
+        [ProducesResponseType(typeof(ApiResult<long>), (int)HttpStatusCode.OK)]
+        [SwaggerOperation(Summary = "RabbitMQ by An Thuyen Le")]
+        public async Task<ActionResult<ApiResult<long>>> CreateOrder([FromBody]CreateOrderCommand command)
+        {
+            var result = await _mediator.Send(command);
             return Ok(result);
         }
+    
+        [HttpPut("{id:long}",Name = RouteNames.UpdateOrder)]
+        [ProducesResponseType(typeof(ApiResult<OrderDto>), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<OrderDto>> UpdateOrder([Required]long id, [FromBody]UpdateOrderCommand command)
+        {
+            command.SetId(id);
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+        [HttpDelete("{id:long}",Name = RouteNames.DeleteOrder)]
+        [ProducesResponseType(typeof(NoContentResult), (int)HttpStatusCode.NoContent)]
+        public async Task<ActionResult> DeleteOrder([Required]long id)
+        {
+            var command = new DeleteOrderCommand(id);
+            await _mediator.Send(command);
+            return NoContent();
+        }
+        // [HttpPost]
+        // public async Task<IActionResult> CreateOrder(OrderDto orderDto)
+        // {
+        //     var order = _mapper.Map<Order>(orderDto);
+        //     var addedOrder = await _orderRepository.CreateOrder(order);
+        //     await _orderRepository.SaveChangesAsync();
+        //
+        //     var result = _mapper.Map<OrderDto>(addedOrder);
+        //     _messageProducer.SendMessages(result);
+        //     return Ok(result);
+        // }
     }
 }

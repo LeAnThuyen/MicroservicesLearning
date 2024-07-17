@@ -33,7 +33,7 @@ namespace Ordering.Infrastructure.Repositories
 
         public void DeleteOrder(Order order)
         {
-            //(order);
+         Delete(order);
         }
     }
 }

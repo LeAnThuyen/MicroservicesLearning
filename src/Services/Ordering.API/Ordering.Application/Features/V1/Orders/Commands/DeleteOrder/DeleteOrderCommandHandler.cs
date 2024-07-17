@@ -1,4 +1,4 @@
-using AutoMapper;
+
 using MediatR;
 using Ordering.Application.Common.Exceptions;
 using Ordering.Application.Common.Interfaces;
@@ -21,7 +21,7 @@ public class DeleteOrderCommandHandler:IRequestHandler<DeleteOrderCommand>
     }
 
     private const string MethodName = "DeleteOrderCommand";
-    public async Task<Unit> Handle(DeleteOrderCommand request, CancellationToken cancellationToken)
+    public async Task Handle(DeleteOrderCommand request, CancellationToken cancellationToken)
     {
         var orderEntity = await _orderRepository.GetByIdAsync(request.Id);
         if (orderEntity is null)
@@ -30,10 +30,11 @@ public class DeleteOrderCommandHandler:IRequestHandler<DeleteOrderCommand>
         }
         _logger.Information($"BEGIN: {MethodName} -Order: {request.Id}");
        
-      _orderRepository.DeleteAsync(orderEntity);
-        _orderRepository.SaveChangesAsync();
+      _orderRepository.DeleteOrder(orderEntity);
+      orderEntity.DeletedOrder();
+        await _orderRepository.SaveChangesAsync();
 
         _logger.Information($"END: {MethodName} -Order: {request.Id}");
-   return Unit.Value;
+       
     }
 }

@@ -27,6 +27,7 @@ public class CreateOrderCommandHandler:IRequestHandler<CreateOrderCommand,ApiRes
     _logger.Information($"BEGIN: {MethodName} -Username: {request.UserName}");
     var orderEntity = _mapper.Map<Order>(request);
     var addedOrder = await _orderRepository.CreateOrder(orderEntity);
+    orderEntity.AddedOrder();
     await _orderRepository.SaveChangesAsync();
     _logger.Information($"Order: {addedOrder.Id} is successfully created.");
     _logger.Information($"END: {MethodName} -Username: {request.UserName}");
