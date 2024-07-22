@@ -72,7 +72,7 @@ and after download redis successfully, and it will be located in Program Files
 - Backup times (Product API, Customer API, Basket API, Ordering API)
 # More than about Dotnet Ef
 - dotnet ef migrations add {Name of Migration} to create new migration
-- dotnet ef database update to update latest migration version that you wanna migrate.
+- dotnet ef database update to update latest migration version that you want to migrate.
 # Secret password 
 - pjka btgu hxtj kmoj
 # All of step to write a Dockerfile for csproj file
@@ -85,7 +85,7 @@ and after download redis successfully, and it will be located in Program Files
    FROM mcr.microsoft.com/dotnet/sdk:6.0 as build
 + "as base" and "as build". as base is the base dotnet version of csproj file. as build is the environment of this one to build csproj file (Force same version with base).
 
-2. Let's Copy all of path reference of csproj file and write like below
+2. Let's Copy all path reference of csproj file and write like below
    COPY ["{ Typing your path of csproj file. example: Services/Ordering.API/Ordering.Api/Ordering.API.csproj }","{ Typing your path of csproj file and remove from start of path csproj file such as Services/Ordering.API/Ordering.Api/ }"]
 + do similar for all remaining reference
 
