@@ -13,7 +13,18 @@ services:
     volumes:
       - sqlserver_data:/var/lib/sqlserver/data
     ports:
-      - "1435:1433"
+      - "1435:1433" 
+        
+  DoVanThuanDB:
+    container_name: DoVanThuanDB
+    environment:
+      SA_PASSWORD: "Passw0rd!"
+      ACCEPT_EULA: "Y"
+    restart: always
+    volumes:
+      - sqlserver_data_dovanthuan:/var/lib/sqlserver/data
+    ports:
+      - "1444:1444"
         
   #productdb: mysql
   productdb:

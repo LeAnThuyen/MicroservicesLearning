@@ -96,7 +96,6 @@ and after download redis successfully, and it will be located in Program Files
    WORKDIR "{ Type your path of csproj and remove from start of csproj file. example: /src/Services/Ordering.API/Ordering.Api/ }"
    RUN dotnet build "{ Type your csproj file name. example: Ordering.API.csproj }" -c Release -o /app/build
 
-
    FROM build as publish
    RUN dotnet publish "{ Type your csproj file name. example: Ordering.API.csproj }" -c Release -o /app/publish
    FROM base as final

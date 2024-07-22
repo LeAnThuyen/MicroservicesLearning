@@ -4,6 +4,9 @@ services:
   #database section
   orderdb:
     image: mcr.microsoft.com/mssql/server:2019-latest
+    
+  DoVanThuanDB:
+    image: mcr.microsoft.com/mssql/server:2019-latest
   
   productdb:
     image: mysql:8.0.29
@@ -72,6 +75,8 @@ networks:
 volumes:
   sqlserver_data:
     name: sqlserver_data
+  sqlserver_data_dovanthuan:
+    name: sqlserver_data_dovanthuan
   mysql_data:
     name: mysql_data
   postgres_data:
