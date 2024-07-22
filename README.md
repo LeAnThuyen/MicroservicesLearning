@@ -48,15 +48,15 @@ and after download redis successfully, and it will be located in Program Files
 # Install Redis for MacOS
 1. Checking version of Home brew by the following cli " brew --version "
 2. Install redis " brew install redis "
-3. Run command " redis-server " to checking install successfully Redis on MacOS 
+3. Run command " redis-server " to check install successfully Redis on MacOS 
 * Learn more about Redis cli
 - keys * (select all key stored in redis)
-- hgetall (select your value of key if it is hash)
-- del {name of  your key} (delete key has stored)
+- hgetall (select your value of a key if it is hash)
+- del {name of your key} (delete key has stored)
 - type {name of your key} check type of your key has stored
 
 # About Clean Architecture
-- It's quite same Abp Framework structure 
+- It's quite a same Abp Framework structure 
 - Application 
 - Domain 
 - Infrastructure 
