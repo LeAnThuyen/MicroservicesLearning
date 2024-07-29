@@ -6,7 +6,14 @@
         private const int maxPageSize = 50;
         private int _pageNumber = 1;
         private int _pageSize = 10;
+        private int _pageIndex = 1;
 
+
+        public int PageIndex
+        {
+            get => _pageIndex;
+            set => _pageIndex = value < 1 ? 1 : value;
+        }
 
         public int PageNumber { get { return _pageNumber; } set { _pageNumber = value < 1 ? 1 : value; } }
 

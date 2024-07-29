@@ -1,3 +1,5 @@
+using Shared.Enums;
+
 namespace Shared.DTOs.Inventory;
 
 public class PurchaseProductDto
@@ -6,4 +8,5 @@ public class PurchaseProductDto
     public int Quantity { get; set; }
     public string DocumentNo { get; set; } 
     public string ExternalDocumentNo { get; set; }
+    public EDocumentType DocumentType => EDocumentType.Purchase;
 }

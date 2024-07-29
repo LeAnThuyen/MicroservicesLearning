@@ -18,26 +18,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16edadf4-e0b4-4e81-852c-152e9f2af372" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Shared/Configurations/DatabaseSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Shared/DTOs/Inventory/InventoryEntryDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Shared/DTOs/Inventory/PurchaseProductDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Shared/Enums/EDocumentType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Controllers/HomeController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Entities/Abstractions/MongoEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Entities/InventoryEntry.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Extensions/DatabaseSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Extensions/HostExtension.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Extensions/ServiceExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Inventory.API/MappingProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Persistence/InventoryDbSeed.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuildingBlocks/Shared/DTOs/Inventory/GetInventoryPagingQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Extensions/BSonCollectionAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Repositories/Abstraction/IMongoDbRepositoryBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Repositories/Abstraction/MongoDbRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Services/Interfaces/IInventoryService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Services/InventoryService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TanaMicroservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TanaMicroservices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Inventory.API/Controllers/WeatherForecastController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Inventory.API/Inventory.Product.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Inventory.Product.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Inventory.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Inventory.API/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Inventory.API/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Inventory.API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Inventory.API/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Product.API/Persistence/ProductContextSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Product.API/Persistence/ProductContextSeed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildingBlocks/Shared/DTOs/Inventory/PurchaseProductDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildingBlocks/Shared/DTOs/Inventory/PurchaseProductDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildingBlocks/Shared/SeedWork/PagingRequestParameters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildingBlocks/Shared/SeedWork/PagingRequestParameters.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Inventory.API/Entities/InventoryEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Entities/InventoryEntry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Inventory.API/Extensions/ServiceExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Inventory.API/Extensions/ServiceExtensions.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,14 +93,14 @@
   "keyToString": {
     ".NET Launch Settings Profile.Basket.API.executor": "Debug",
     ".NET Launch Settings Profile.Customer.API.executor": "Run",
-    ".NET Launch Settings Profile.Inventory.Product.API: Inventory.API.executor": "Run",
+    ".NET Launch Settings Profile.Inventory.Product.API: Inventory.API.executor": "Debug",
     ".NET Launch Settings Profile.Ordrering.API.executor": "Debug",
     ".NET Launch Settings Profile.Product.API.executor": "Run",
     ".NET Project.Odering.Subscriber.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "do_not_show_solution_notification": "true",
-    "git-widget-placeholder": "Develop",
+    "git-widget-placeholder": "Tana",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -370,7 +361,7 @@
       <workItem from="1721615483240" duration="5436000" />
       <workItem from="1721900878163" duration="2668000" />
       <workItem from="1722223226872" duration="5991000" />
-      <workItem from="1722236998832" duration="3561000" />
+      <workItem from="1722236998832" duration="13326000" />
     </task>
     <servers />
   </component>
