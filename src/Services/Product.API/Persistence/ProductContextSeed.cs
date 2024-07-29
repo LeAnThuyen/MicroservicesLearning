@@ -28,6 +28,16 @@ namespace Product.API.Persistence
                     Price=(decimal)121212.6712,
 
 
+                },
+                new()
+                {
+                    No="Gucci Gang",
+                    Name="Gucci Gucci Gang Gucci Gang",
+                    Summary="For Men",
+                    Description="Gucci Gang Not For Sell =))",
+                    Price=(decimal)121212.6712,
+
+
                 }
             };
 
